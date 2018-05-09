@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
 encoding//WebContent/client/partials/home.html=UTF-8
+encoding//WebContent/client/partials/login.html=UTF-8
 encoding//WebContent/client/partials/navbar.html=UTF-8
 encoding//WebContent/client/views/index.ejs=UTF-8
