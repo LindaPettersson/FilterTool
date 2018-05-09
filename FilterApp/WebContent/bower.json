@@ -1,0 +1,17 @@
+{
+  "name": "webcontent",
+  "description": "0.0.1",
+  "main": "server.js",
+  "authors": [
+    "Linda Pettersson (2018)"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/LindaPettersson/FilterTool",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "angular-route": "latest"
+  },
+  "install": {
+  	"path": "client/libs"
+  }
+}
