@@ -2,7 +2,7 @@ module.exports = function(app){
 	var multer = require('multer'); //npm install multer --save
 	var upload = multer({dest: __dirname + '/uploads'});
 	
-	serverapp.post("/api/file/upload", upload.single('stacktraceFile'), uploadFile);
+	app.post("/api/file/upload", upload.single('stacktraceFile'), uploadFile);
 	
 	//callback function
 	function uploadFile(req, res){
@@ -14,6 +14,7 @@ module.exports = function(app){
 		var destination = myFile.destination; //folder where file is saved
 		var size = myFile.size; //file size
 		
+		res.send(myFile);
 	};
 	
 };
