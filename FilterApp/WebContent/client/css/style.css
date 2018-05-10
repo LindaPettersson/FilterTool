@@ -12,7 +12,8 @@ a {
 }
 #view-header {
  	text-align: center;
-    padding: 5%;
+    margin-left: -7%;
+    margin-top: 25px;
 }
 #view-body {
 	padding-top: 3%;

@@ -9,7 +9,7 @@
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
-	
+	<div class="col-sm-10 offset-1">
 	<table ng-table="tableParams" class="table" show-filter="true">
 		<tr ng-repeat="type in $data">
 			<td title="'Datum'" filter="{ date: 'text'}" sortable="'date'">
@@ -20,4 +20,6 @@
 				{{type.amount}}</td>
 		</tr>
 	</table>
+	</div>
+	<div class="col-sm-1"></div>
 </div>
