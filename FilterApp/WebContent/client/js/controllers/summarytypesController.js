@@ -1,4 +1,11 @@
 myApp.controller('summarytypesController', ['$scope', '$location', 'NgTableParams', function($scope, $location, NgTableParams){
+	
+	//Back to choosefiles
+	$scope.goToChoosefiles = function(){
+		$location.path('/choosefiles');
+	}
+	
+	
 	//Display dummy data in table
 	var data = [
 		{date: "2018-05-08 15:14:25", name: "FileNotFound", amount: 3},

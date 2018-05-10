@@ -12,10 +12,14 @@ a {
 }
 #view-header {
  	text-align: center;
-    padding: 2%;
+    padding: 5%;
 }
 #view-body {
 	padding-top: 3%;
+}
+#arrow-back {
+	text-align: left;
+	cursor: pointer;
 }
 
 

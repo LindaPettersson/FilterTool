@@ -7,7 +7,7 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 	    fileUpload.uploadFileToUrl(file, uploadUrl);
 		
 	    $location.path('/summarytypes');
-		
-    
 	};
+	
+	
 }]);
