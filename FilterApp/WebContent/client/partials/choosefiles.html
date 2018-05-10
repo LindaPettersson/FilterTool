@@ -1,22 +1,15 @@
 <!-- Choose Files -->
-<div class="container" id="choosefiles-container"
-	ng-controller="choosefilesController">
+<div class="container" id="choosefiles-container" ng-controller="choosefilesController">
+	
 	<div class="row">
-		<div id="arrow-back" class="col-sm-2 offset-1" ng-click="goToChoosefiles()">
-			<i class="fas fa-caret-left fa-5x"></i>
-		</div>
+		<div class="col-sm-2 offset-1"></div>
 		<div id="view-header" class="col-sm-8">
 			<h3>VÄLJ STACKTRACE</h3>
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
 
-
-
-	<form action="/api/file/upload" method="post"
-		enctype="multipart/form-data" id="choosefiles-form">
-
-
+	<form action="/api/file/upload" method="post" enctype="multipart/form-data" id="choosefiles-form">
 		<div class="row mt-5">
 			<div class="col-sm-2 offset-1">
 				<h1>1</h1>
@@ -32,7 +25,6 @@
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
-
 		<br>
 		<div class="row">
 			<div class="col-sm-2 offset-1">
@@ -45,7 +37,6 @@
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
-
 	</form>
 
 
