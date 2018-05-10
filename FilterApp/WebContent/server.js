@@ -16,6 +16,9 @@ app.get('/', function(req, res){
 	res.render('index.ejs');
 });
 
+
+require('./exports/serverapp.js')(app);
+
 //listen for incoming requests on given port
 app.listen(port, function(){
 	console.log('SERVER RUNNING ON: ' + port);
