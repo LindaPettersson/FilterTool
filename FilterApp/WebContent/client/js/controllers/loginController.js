@@ -1,3 +1,6 @@
-myApp.controller('loginController', ['$scope', function($scope){
-	
+myApp.controller('loginController', ['$scope', '$location', function($scope, $location){
+	//Go to choosefiles
+	$scope.login = function(){
+		$location.path('/choosefiles');
+	};
 }]);
