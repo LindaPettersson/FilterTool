@@ -6,7 +6,8 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
 	$routeProvider.when('/summarytypes', {templateUrl: 'partials/summarytypes.html', controller: 'summarytypesController'});
 	$routeProvider.otherwise({redirectTo: '/home'});
 	
-	//remove hashtag from url
-	$locationProvider.html5Mode({enabled: true, requireBase: false});
+
+	
 	
 }]);
+
