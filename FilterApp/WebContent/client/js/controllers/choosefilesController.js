@@ -2,13 +2,13 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 	$scope.files = []; 
 	
 	 $scope.showContent = function($fileContent){
-	        $scope.content = $fileContent;
+		 $scope.content = $fileContent;
 	    };
 	
 	
-	//Proceed to display files in 'Summary types'
-	    $scope.GoToSummaryTypes = function(){
-			$location.path('/summarytypes');
+	 //Proceed to display files in 'Summary types'
+	 $scope.GoToSummaryTypes = function(){
+		 $location.path('/summarytypes');
 		};
 	
 	

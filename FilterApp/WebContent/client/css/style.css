@@ -44,12 +44,12 @@ a {
 }
 #startpage-container {
 	margin: auto;
-    width: 50%;
+    width: 90%;
     text-align: center;
 }
 #login-form {
 	margin: auto;
-    width: 60%;
+    width: 30%;
     text-align: center;
 }
 #login-buttons {

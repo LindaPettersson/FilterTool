@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-sm-2 offset-1"></div>
 		<div id="view-header" class="col-sm-8">
-			<h3>VÄLJ STACKTRACE</h3>
+			<h3>LADDA UPP STACKTRACE</h3>
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
@@ -13,16 +13,16 @@
 	<form action="/api/file/upload" method="post"
 		enctype="multipart/form-data" id="choosefiles-form">
 		<div class="row mt-5">
-			<div class="col-sm-2 offset-1">
+			<div class="col-sm-2 offset-1" >
 				<h1>1</h1>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<p>HÄMTA FIL</p>
-				<!-- <label for="file-upload" class="custom-file-upload">Välj fil</label><input
+				<label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label><input
 					id="file-upload" type="file" name="stacktraceFile"
-					ng-file-model="files" /> -->
-					<label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label>
-					<input id="file-upload" type="file" name="stacktraceFile"/>
+					ng-file-model="files" multiple/> 
+					<!-- <label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label>
+					<input id="file-upload" type="file" name="stacktraceFile"/> -->
 					<!-- TEST to display file content....use in input: on-read-file="showContent($fileContent)" -->
 				
 				
@@ -30,7 +30,7 @@
 				<br>
 				<p id="filename" ng-repeat="file in files">{{file.name}}</p>
 			</div>
-			<div class="col-sm-1"></div>
+			<div class="col-sm-3"></div>
 		</div>
 		<br>
 		<div class="row">
@@ -38,7 +38,7 @@
 				<h1>2</h1>
 			</div>
 			<div class="col-sm-8">
-				<p>LADDA UPP</p>
+				<p>TILL ÖVERSIKT</p>
 				<button type="button" class="btn btn-success btn-sm" ng-click="GoToSummaryTypes()"><i class="fas fa-step-forward"></i> Fortsätt</button>
 				
 				<!-- TEST -->
