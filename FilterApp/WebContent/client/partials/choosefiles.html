@@ -21,9 +21,11 @@
 				<!-- <label for="file-upload" class="custom-file-upload">Välj fil</label><input
 					id="file-upload" type="file" name="stacktraceFile"
 					ng-file-model="files" /> -->
-					<label for="file-upload" class="custom-file-upload">Välj fil</label><input
-					id="file-upload" type="file" name="stacktraceFile"
-					on-read-file="showContent($fileContent)" />
+					<label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label>
+					<input id="file-upload" type="file" name="stacktraceFile"/>
+					<!-- TEST to display file content....use in input: on-read-file="showContent($fileContent)" -->
+				
+				
 				<!-- add 'multiple' to input if multiple files -->
 				<br>
 				<p id="filename" ng-repeat="file in files">{{file.name}}</p>
@@ -37,13 +39,13 @@
 			</div>
 			<div class="col-sm-8">
 				<p>LADDA UPP</p>
-				<!-- <button type="submit" class="btn btn-success btn-sm">Fortsätt</button> -->
+				<button type="button" class="btn btn-success btn-sm" ng-click="GoToSummaryTypes()"><i class="fas fa-step-forward"></i> Fortsätt</button>
 				
-				
-				<div ng-if="content">
+				<!-- TEST -->
+				<!-- <div ng-if="content">
 					<h2>File content is:</h2>
 					<pre>{{ content }}</pre>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-sm-1"></div>
 		</div>

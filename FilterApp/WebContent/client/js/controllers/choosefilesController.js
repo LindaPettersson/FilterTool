@@ -7,7 +7,9 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 	
 	
 	//Proceed to display files in 'Summary types'
-
+	    $scope.GoToSummaryTypes = function(){
+			$location.path('/summarytypes');
+		};
 	
 	
 }]);

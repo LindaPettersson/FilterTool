@@ -3,9 +3,33 @@
 	<div class="container" id="startpage-container" ng-controller="homeController">
 		<div id="public-header">
 			<h1>StackFilter</h1>
-			<h3>Hitta lätt i stacktrace</h3>
+			<h3>Logga in</h3>
 		</div>
-		<div id="startpage-buttons">
+		<form id="login-form">
+			<div class="form-group mt-5">
+				<input type="text" class="form-control" ng-model="username"
+					placeholder="Användarnamn">
+			</div>
+			<div class="form-group" id="login-group">
+				<input type="password" class="form-control" ng-model="password" 
+					placeholder="Lösenord">
+			</div>
+			<div class="form-goup inline">
+				<div id="login-buttons">
+					<button type="button" ng-click="cancelLogin()" class="btn btn-danger btn-sm"
+						id="login-btn-abort"><i class="fas fa-ban"></i> Avbryt</button>
+					<button type="button" ng-click="login()" class="btn btn-success btn-sm"
+						id="login-btn-login"><i class="fas fa-sign-in-alt"></i> Logga in</button>
+					
+				</div>
+			</div>
+		</form>
+		
+		
+		
+		
+		
+		<!-- <div id="startpage-buttons">
 			<button type="button" class="btn btn-dark btn-sm m-1">
 				<i class="fas fa-user-plus"></i> Registrera
 			</button>
@@ -18,6 +42,6 @@
 			<button type="button" class="btn btn-link btn-sm">
 				<i class="fas fa-key"></i> Glömt lösenord
 			</button>
-		</div>
+		</div> -->
 	</div>
 </div>
