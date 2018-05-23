@@ -1,7 +1,7 @@
 /*** Global ***/
 h1, h2, h3, h4, p, a , th, td{
-	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
-	color: #84a2c3;
+	font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif; !important;
+	color: #84a2c3; 
 }
 a {
     color: #383d41; !important;
@@ -107,14 +107,8 @@ input[type='file'] {
 
 
 
-
-
-.tabsdemoDynamicHeight md-content {
-  background-color: transparent !important; }
-  .tabsdemoDynamicHeight md-content md-tabs {
-    background: #f6f6f6;
-    border: 1px solid #e1e1e1; }
-    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
-      background: white; }
-  .tabsdemoDynamicHeight md-content h1:first-child {
-    margin-top: 0; }
+/***** SUMMARY EXCEPTIONS *******/
+#table-exceptions-details{
+	font-size: 10px;
+    text-align: left;
+}

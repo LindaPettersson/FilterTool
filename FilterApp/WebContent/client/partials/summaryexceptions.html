@@ -10,16 +10,13 @@
 		</div>
 
 		<div id="view-body">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-10 offset-1">
-				<table class="table" >
+			<div class="col-sm-12">
+				<table class="table" id="table-exceptions">
 					<tr ng-repeat-start="log in data">
 						<td><button ng-if="log.expanded"
 								ng-click="log.expanded = false">-</button>
-							<button ng-if="!log.expanded"
-								ng-click="expandSelected(log)">+</button></td>
-						<td title="'Datum'" filter="{ date: 'text'}"
-							sortable="'date'">{{log.date}}</td>
+							<button ng-if="!log.expanded" ng-click="expandSelected(log)">+</button></td>
+						<td title="'Datum'" filter="{ date: 'text'}" sortable="'date'">{{log.date}}</td>
 						<td title="'Berörd klass'" filter="{ name: 'text'}"
 							sortable="'name'">{{log.name}}</td>
 						<!-- <td>
@@ -29,39 +26,16 @@
 						</td> -->
 					</tr>
 					<tr ng-if="log.expanded" ng-repeat-end="">
-						<td colspan="3">hello</td>
-						<!-- <td colspan="3">{{log.details}}</td> -->
-						</tr>
+						<!-- <td colspan="3">hello</td> -->
+						<td colspan="3" id="table-exceptions-details">
+							<span>{{log.logDate}}</span><br>
+							<span>{{log.logThread}}</span><br>
+							<span>{{log.logCallID}}</span><br>
+							<span>{{log.logException}}</span><br>
+							<span>{{log.logContent}}</span>
+						</td>
+					</tr>
 				</table>
-
-
-
-				<!-- <table>
-					<thead>
-						<tr>
-							<td></td>
-							<td>Datum</td>
-							<td>Berörd klass</td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat-start="person in people">
-							<td>
-								<button ng-if="person.expanded"
-									ng-click="person.expanded = false">-</button>
-								<button ng-if="!person.expanded"
-									ng-click="expandSelected(person)">+</button>
-							</td>
-							<td>{{person.name}}</td>
-							<td>{{person.gender}}</td>
-						</tr>
-						<tr ng-if="person.expanded" ng-repeat-end="">
-							<td colspan="3">{{person.details}}</td>
-						</tr>
-					</tbody>
-				</table>
- -->
 			</div>
-			<div class="col-sm-1"></div>
 		</div>
 	</div>
