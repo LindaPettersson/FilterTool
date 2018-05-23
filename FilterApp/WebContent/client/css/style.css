@@ -108,7 +108,7 @@ input[type='file'] {
 
 
 /***** SUMMARY EXCEPTIONS *******/
-#table-exceptions{
+#table-types, #table-exceptions{
 	table-layout: fixed;
 }
 #table-exceptions-details{
