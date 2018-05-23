@@ -1,7 +1,7 @@
 myApp.controller('summarytypesController', ['$scope', '$location','NgTableParams', function($scope, $location, NgTableParams){
 	
 	//Back to choosefiles
-	$scope.goToChoosefiles = function(){
+	$scope.goToChooseFiles = function(){
 		$location.path('/choosefiles');
 	}
 	
