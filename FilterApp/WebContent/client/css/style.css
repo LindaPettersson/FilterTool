@@ -108,7 +108,33 @@ input[type='file'] {
 
 
 /***** SUMMARY EXCEPTIONS *******/
+#table-exceptions{
+	table-layout: fixed;
+}
 #table-exceptions-details{
 	font-size: 10px;
     text-align: left;
+    
 }
+.center{
+	margin: auto;
+    width: 70%;
+}
+#transparent-btn{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+
+
+
+
+
+
+
+

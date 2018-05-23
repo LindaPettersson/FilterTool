@@ -6,8 +6,8 @@ myApp.controller('summaryexceptionsController', ['$scope', '$location', 'NgTable
 	
 	
 	//Display dummy data in table	
-		 $scope.data = [
-			  {date: "2017-11-13 16:35:36", name: "IdSokning.java:149", logDate: "Tid: 2017-12-12 20.05.05;077",
+		 var data = [
+			  {id: "1", date: "2017-11-13 16:35:36", name: "IdSokning.java:149", logDate: "Tid: 2017-12-12 20.05.05;077",
 			  logThread: "Tråd: [ACTIVE] ExecuteThread: 0 for queue: weblogic.kernel.Default (self-tuning)",
 			  logCallID: "AnropsID: n/a",
 			  logException: "java.io.FileNotFoundException: /opt/rsv/pki/prod/int_org/ca-cert/temp (Is a directory (errno:21))",
@@ -67,10 +67,13 @@ myApp.controller('summaryexceptionsController', ['$scope', '$location', 'NgTable
 				{date: "2017-11-11 12:34:30", name: "IdSokning.java:149", details: "log header", content: "log content"},
 				{date: "2017-11-11 12:25:36", name: "IdSokning.java:149", details: "log header", content: "log content"},
 		    ];
+		 $scope.tableParams = new NgTableParams({}, { dataset: data});
 		 	$scope.expandSelected=function(log){
-			    $scope.data.forEach(function(val){
-			      val.expanded=false;
-			    })
+		 		data.forEach(function(val){
+		 			if(data.id == log.id){
+		 				val.expanded=false;
+		 			}
+		 		})
 			    log.expanded=true;
 			  }
   

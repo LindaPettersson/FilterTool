@@ -10,12 +10,12 @@
 		</div>
 
 		<div id="view-body">
-			<div class="col-sm-12">
-				<table class="table" id="table-exceptions">
-					<tr ng-repeat-start="log in data">
+			
+				<table ng-table="tableParams" show-filter="true" class="table table-responsive-sm center" id="table-exceptions">
+					<tr ng-repeat-start="log in $data">
 						<td><button ng-if="log.expanded"
-								ng-click="log.expanded = false">-</button>
-							<button ng-if="!log.expanded" ng-click="expandSelected(log)">+</button></td>
+								ng-click="log.expanded = false" id="transparent-btn"><i class="fas fa-minus"></i></button>
+							<button ng-if="!log.expanded" ng-click="expandSelected(log)" id="transparent-btn"><i class="fas fa-plus"></i></button></td>
 						<td title="'Datum'" filter="{ date: 'text'}" sortable="'date'">{{log.date}}</td>
 						<td title="'Berörd klass'" filter="{ name: 'text'}"
 							sortable="'name'">{{log.name}}</td>
@@ -27,15 +27,12 @@
 					</tr>
 					<tr ng-if="log.expanded" ng-repeat-end="">
 						<!-- <td colspan="3">hello</td> -->
-						<td colspan="3" id="table-exceptions-details">
-							<span>{{log.logDate}}</span><br>
-							<span>{{log.logThread}}</span><br>
-							<span>{{log.logCallID}}</span><br>
-							<span>{{log.logException}}</span><br>
-							<span>{{log.logContent}}</span>
+						<td colspan="3" id="table-exceptions-details"><span>{{log.logDate}}</span><br>
+							<span>{{log.logThread}}</span><br> <span>{{log.logCallID}}</span><br>
+							<span>{{log.logException}}</span><br> <span>{{log.logContent}}</span>
 						</td>
 					</tr>
 				</table>
-			</div>
+			
 		</div>
 	</div>
