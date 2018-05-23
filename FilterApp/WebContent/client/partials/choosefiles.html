@@ -10,73 +10,47 @@
 		<div class="col-sm-1"></div>
 	</div>
 
-	<form action="/api/file/upload" method="post"
-		enctype="multipart/form-data" id="choosefiles-form">
-		<div class="row mt-5">
-			<div class="col-sm-2 offset-1" >
-				<h1>1</h1>
+	<div id=view-body>
+		<div class="panel panel-info" id="fileDir">
+			<div class="panel-heading" id="fileDir-heading">
+				<p class="panel-title">FILHANTERAREN</p>
 			</div>
-			<div class="col-sm-6">
-				<p>HÄMTA FIL</p>
-				<label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label><input
-					id="file-upload" type="file" name="stacktraceFile"
-					ng-file-model="files" multiple/> 
-					<!-- <label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label>
+			<div class="panel-body" id="fileDir-body">
+
+				<!-- <form action="/api/file/upload" method="post"
+		enctype="multipart/form-data" id="choosefiles-form"> -->
+				<!-- <div class="row mt-5">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-6"> -->
+				<label for="file" class="custom-file-upload"><i
+					class="far fa-folder-open"></i> Välj fil</label><input id="file"
+					type="file" name="stacktraceFile" ng-file-model="files" multiple />
+				<!-- <label for="file-upload" class="custom-file-upload"><i class="fas fa-upload"></i> Välj fil</label>
 					<input id="file-upload" type="file" name="stacktraceFile"/> -->
-					<!-- TEST to display file content....use in input: on-read-file="showContent($fileContent)" -->
-				
-				
-				<!-- add 'multiple' to input if multiple files -->
+				<!-- TEST to display file content....use in input: on-read-file="showContent($fileContent)" -->
+
+
 				<br>
 				<p id="filename" ng-repeat="file in files">{{file.name}}</p>
+				<button type="button" class="btn btn-success btn-sm mt-3"
+					ng-click="Upload()">
+					<i class="fas fa-upload"></i> Ladda upp
+				</button>
 			</div>
-			<div class="col-sm-3"></div>
 		</div>
 		<br>
-		<div class="row">
-			<div class="col-sm-2 offset-1">
-				<h1>2</h1>
+		<div class="panel panel-info" id="dragdrop" mt-5>
+			<div class="panel-heading" id="dragdrop-heading">
+				<p class="panel-title">DRAG AND DROP</p>
 			</div>
-			<div class="col-sm-8">
-				<p>TILL ÖVERSIKT</p>
-				<button type="button" class="btn btn-success btn-sm" ng-click="GoToSummaryTypes()"><i class="fas fa-step-forward"></i> Fortsätt</button>
-				
-				<!-- TEST -->
-				<!-- <div ng-if="content">
-					<h2>File content is:</h2>
-					<pre>{{ content }}</pre>
-				</div> -->
-			</div>
-			<div class="col-sm-1"></div>
+			<div class="panel-body" id="dragdrop-body"></div>
 		</div>
-	</form>
 
 
 
+	</div>
 
 
 
-
-	<!-- <div class="row" id="choosefiles-step">
-			<div id="step">
-				<h1>1</h1>
-			</div>
-			<div id="action">
-				<p>VÄLJ STACKTRACE</p>
-				<input name="stacktraceFile" type="file" ng-file-model="files"  /> add 'multiple' if multiple files
-				<br>
-				<p ng-repeat="file in files">{{file.name}}</p>
-			</div>
-		</div>
-		<div class="row" id="choosefiles-step">
-			<div id="step">
-				<h1>2</h1>
-			</div>
-			<div id="action">
-				<p>TILL ÖVERSIKT</p>
-				<button type="button" class="btn btn-default btn-sm"
-					ng-click="uploadFile()">Fortsätt</button> 
-			</div>
-		</div> -->
 
 </div>

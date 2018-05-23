@@ -1,4 +1,4 @@
-myApp.controller('summarytypesController', ['$scope', '$location', 'NgTableParams', function($scope, $location, NgTableParams){
+myApp.controller('summarytypesController', ['$scope', '$location','NgTableParams', function($scope, $location, NgTableParams){
 	
 	//Back to choosefiles
 	$scope.goToChoosefiles = function(){
@@ -30,4 +30,6 @@ myApp.controller('summarytypesController', ['$scope', '$location', 'NgTableParam
 		{date: "2018-05-06 09:14:30", name: "IllegalArgument", amount: 9},
 		];
 	$scope.tableParams = new NgTableParams({}, { dataset: data});
+	
+	
 }]);

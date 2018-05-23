@@ -9,7 +9,7 @@ myApp.controller('homeController', ['$scope', '$location', function($scope, $loc
 	 */
 	
 	
-	//If OK - Go to choosefiles
+	//If OK - Go to 'choosefiles'
 	$scope.login = function(){
 		$location.path('/choosefiles');
 	};
@@ -19,8 +19,5 @@ myApp.controller('homeController', ['$scope', '$location', function($scope, $loc
 		//TODO return to intranet
 	}
 	
-//	//Go to login
-//	$scope.GoToLogin = function(){
-//		$location.path('/login');
-//	};
+
 }]);

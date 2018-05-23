@@ -59,6 +59,24 @@ a {
 
 /*** Choose Files ***/
 
+#fileDir, #dragdrop{
+    border-style: solid;
+    border-radius: 12px;
+    border-color: #8aa7c6;
+    background-color: #f3f9ff;
+    width: 70%;
+    margin: auto;
+    
+}
+#fileDir-heading, #dragdrop-heading{
+	padding: 2% 0% 3% 3%;
+}
+#fileDir-body{
+	padding: 2% 0% 3% 9%;
+}
+#dragdrop-body{
+	
+}
 #choosefiles-form {
     width: 100%;
     text-align: left;
@@ -79,10 +97,24 @@ input[type='file'] {
     background-color: #1b1e21;
     color: white;
     display: inline-block;
-    padding: 4px 14px;
+    padding: 4px 22px;
     cursor: pointer;
     font-size: 14px;
 }
 #filename {
 	color: #383d41; !important;
 }
+
+
+
+
+
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
