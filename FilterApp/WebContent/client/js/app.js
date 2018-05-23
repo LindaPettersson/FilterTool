@@ -3,6 +3,7 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
 	$routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'homeController'});
 	$routeProvider.when('/choosefiles', {templateUrl: 'partials/choosefiles.html', controller: 'choosefilesController'});
 	$routeProvider.when('/summarytypes', {templateUrl: 'partials/summarytypes.html', controller: 'summarytypesController'});
+	$routeProvider.when('/summaryexceptions', {templateUrl: 'partials/summaryexceptions.html', controller: 'summaryexceptionsController'});
 	$routeProvider.otherwise({redirectTo: '/home'});
 	
 
