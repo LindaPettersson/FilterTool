@@ -15,22 +15,18 @@
 					<p>STACKTRACE: 20171113-2003.IDdP2.stacktrace.log</p>
 				</div>
 			</div>
-			<table ng-table="tableParams" show-filter="true"
-				class="table table-responsive-sm center" id="table-exceptions">
+			<table ng-table="tableParams" show-filter="true" class="table table-responsive-sm center" id="table-exceptions">
+				<col width="40">
 				<tr ng-repeat-start="log in $data">
-					<td><button ng-if="log.expanded"
-							ng-click="log.expanded = false" id="transparent-btn">
-							<i class="fas fa-minus"></i>
-						</button>
-						<button ng-if="!log.expanded" ng-click="expandSelected(log)"
-							id="transparent-btn">
-							<i class="fas fa-plus"></i>
-						</button></td>
+					<td>
+						<button ng-if="log.expanded" ng-click="log.expanded = false" id="transparent-btn">
+							<i class="fas fa-minus"></i></button>
+						<button ng-if="!log.expanded" ng-click="expandSelected(log)" id="transparent-btn">
+							<i class="fas fa-plus"></i></button>
+					</td>
 					<td title="'Datum'" filter="{ date: 'text'}" sortable="'date'">{{log.date}}</td>
-					<td title="'Typ av exception'" filter="{ name: 'text'}"
-						sortable="'name'">{{log.type}}</td>
-					<td title="'Berörd klass'" filter="{ name: 'text'}"
-						sortable="'name'">{{log.name}}</td>
+					<td title="'Typ av exception'" filter="{ name: 'text'}" sortable="'name'">{{log.type}}</td>
+					<td title="'Berörd klass'" filter="{ name: 'text'}" sortable="'name'">{{log.name}}</td>
 					<!-- <td>
 							<button class="btn btn-dark" ng-click="goToSummaryException()">
 								<i class="far fa-hand-pointer"></i> Välj
@@ -39,8 +35,10 @@
 				</tr>
 				<tr ng-if="log.expanded" ng-repeat-end="">
 					<!-- <td colspan="3">hello</td> -->
-					<td colspan="3" id="table-exceptions-details"><span>{{log.logDate}}</span><br>
-						<span>{{log.logThread}}</span><br> <span>{{log.logCallID}}</span><br>
+					<td colspan="3" id="table-exceptions-details">
+						<span>{{log.logDate}}</span><br>
+						<span>{{log.logThread}}</span><br> 
+						<span>{{log.logCallID}}</span><br>
 						<span>{{log.logException}}</span><br>
 						<div id="log-content">
 						  <!--   <ul ng-repeat="line in $logContent">

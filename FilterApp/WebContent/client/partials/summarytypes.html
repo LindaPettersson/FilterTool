@@ -8,7 +8,6 @@
 		<div id="view-header" class="col-sm-8">
 			<h3>ÖVERSIKT - TYPER AV EXCEPTIONS</h3>
 		</div>
-
 		<div id="view-body">
 			<div id="info-row">
 				<div id="stacktrace-name">
@@ -20,22 +19,16 @@
 					</button>
 				</div>
 			</div>
-			<table ng-table="tableParams"
-				class="table table-responsive-sm center" show-filter="true"
-				id="table-types">
+			<table ng-table="tableParams" class="table table-responsive-sm center" show-filter="true" id="table-types">
 				<tr ng-repeat="type in $data">
-					<td title="'Senaste logg'" filter="{ date: 'text'}"
-						sortable="'date'">{{type.date}}</td>
-					<td title="'Typ av exception'" filter="{ name: 'text'}"
-						sortable="'name'">{{type.name}}</td>
+					<td title="'Senaste logg'" filter="{ date: 'text'}" sortable="'date'">{{type.date}}</td>
+					<td title="'Typ av exception'" filter="{ name: 'text'}" sortable="'name'">{{type.name}}</td>
 					<td title="'Antal'">{{type.amount}}</td>
 					<td>
 						<button class="btn btn-dark" ng-click="goToSummaryException()">
-							<i class="far fa-hand-pointer"></i> Välj
-						</button>
+							<i class="far fa-hand-pointer"></i> Välj</button>
 					</td>
 				</tr>
 			</table>
-
 		</div>
 	</div>
