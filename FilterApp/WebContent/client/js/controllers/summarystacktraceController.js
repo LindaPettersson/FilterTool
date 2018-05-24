@@ -88,54 +88,54 @@ myApp.controller('summarystacktraceController', ['$scope', '$location', 'NgTable
 		 $scope.tableParams = new NgTableParams({}, { dataset: data});
 		 
 		 /*** List of log content ***/
-		 var logContent = [
-			 {id: "1", line: "at se.rsv.id.sok.IdSokning.konverteraTAnsokningarVO(IdSokning.java:149)"},	
-			 {id: "1", line: "at se.rsv.id.sok.IdSokning.visaArendenKort(IdSokning.java:78)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOImpl.visaAnsokningar(IdArendeTOImpl.java:116)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB.visaAnsokningar(IdArendeTOEJB.java:50)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB.visaAnsokningar(IdArendeTOEJB.java:50)"},
-			 {id: "1", line: "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)"},
-			 {id: "1", line: "at java.lang.reflect.Method.invoke(Method.java:597)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:310)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:182)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:149)"},
-			 {id: "1", line: "at com.oracle.pitchfork.intercept.MethodInvocationInvocationContext.proceed(MethodInvocationInvocationContext.java:103)"},
-			 {id: "1", line: "at se.rsv.zi.ejb.ZiHeaderInterceptor.checkHeader(ZiHeaderInterceptor.java:121)"},
-			 {id: "1", line: "at sun.reflect.GeneratedMethodAccessor163.invoke(Unknown Source)"},
-			 {id: "1", line: "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)"},
-			 {id: "1", line: "at java.lang.reflect.Method.invoke(Method.java:597)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:310)"},
-			 {id: "1", line: "at com.oracle.pitchfork.intercept.JeeInterceptorInterceptor.invoke(JeeInterceptorInterceptor.java:68)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:131)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
-			 {id: "1", line: "at com.oracle.pitchfork.spi.MethodInvocationVisitorImpl.visit(MethodInvocationVisitorImpl.java:34)"},
-			 {id: "1", line: "at weblogic.ejb.container.injection.EnvironmentInterceptorCallbackImpl.callback(EnvironmentInterceptorCallbackImpl.java:54)"},
-			 {id: "1", line: "at com.oracle.pitchfork.spi.EnvironmentInterceptor.invoke(EnvironmentInterceptor.java:42)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:89)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:131)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:119)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
-			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)"},
-			 {id: "1", line: "at com.sun.proxy.$Proxy66.visaAnsokningar(Unknown Source)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl.__WL_invoke(Unknown Source)"},
-			 {id: "1", line: "at weblogic.ejb.container.internal.SessionRemoteMethodInvoker.invoke(SessionRemoteMethodInvoker.java:40)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl.visaAnsokningar(Unknown Source)"},
-			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl_WLSkel.invoke(Unknown Source)"},
-			 {id: "1", line: "at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:667)"},
-			 {id: "1", line: "at weblogic.rmi.cluster.ClusterableServerRef.invoke(ClusterableServerRef.java:230)"},
-			 {id: "1", line: "at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:522)"},
-			 {id: "1", line: "at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)"},
-			 {id: "1", line: "at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:146)"}
-		 ];
+//		 var logContent = [
+//			 {id: "1", line: "at se.rsv.id.sok.IdSokning.konverteraTAnsokningarVO(IdSokning.java:149)"},	
+//			 {id: "1", line: "at se.rsv.id.sok.IdSokning.visaArendenKort(IdSokning.java:78)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOImpl.visaAnsokningar(IdArendeTOImpl.java:116)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB.visaAnsokningar(IdArendeTOEJB.java:50)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB.visaAnsokningar(IdArendeTOEJB.java:50)"},
+//			 {id: "1", line: "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)"},
+//			 {id: "1", line: "at java.lang.reflect.Method.invoke(Method.java:597)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:310)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:182)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:149)"},
+//			 {id: "1", line: "at com.oracle.pitchfork.intercept.MethodInvocationInvocationContext.proceed(MethodInvocationInvocationContext.java:103)"},
+//			 {id: "1", line: "at se.rsv.zi.ejb.ZiHeaderInterceptor.checkHeader(ZiHeaderInterceptor.java:121)"},
+//			 {id: "1", line: "at sun.reflect.GeneratedMethodAccessor163.invoke(Unknown Source)"},
+//			 {id: "1", line: "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)"},
+//			 {id: "1", line: "at java.lang.reflect.Method.invoke(Method.java:597)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:310)"},
+//			 {id: "1", line: "at com.oracle.pitchfork.intercept.JeeInterceptorInterceptor.invoke(JeeInterceptorInterceptor.java:68)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:131)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
+//			 {id: "1", line: "at com.oracle.pitchfork.spi.MethodInvocationVisitorImpl.visit(MethodInvocationVisitorImpl.java:34)"},
+//			 {id: "1", line: "at weblogic.ejb.container.injection.EnvironmentInterceptorCallbackImpl.callback(EnvironmentInterceptorCallbackImpl.java:54)"},
+//			 {id: "1", line: "at com.oracle.pitchfork.spi.EnvironmentInterceptor.invoke(EnvironmentInterceptor.java:42)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:89)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:131)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:119)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)"},
+//			 {id: "1", line: "at com.bea.core.repackaged.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:204)"},
+//			 {id: "1", line: "at com.sun.proxy.$Proxy66.visaAnsokningar(Unknown Source)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl.__WL_invoke(Unknown Source)"},
+//			 {id: "1", line: "at weblogic.ejb.container.internal.SessionRemoteMethodInvoker.invoke(SessionRemoteMethodInvoker.java:40)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl.visaAnsokningar(Unknown Source)"},
+//			 {id: "1", line: "at se.rsv.id.tjanst.IdArendeTOEJB_bh16jx_IdArendeTORemoteImpl_WLSkel.invoke(Unknown Source)"},
+//			 {id: "1", line: "at weblogic.rmi.internal.BasicServerRef.invoke(BasicServerRef.java:667)"},
+//			 {id: "1", line: "at weblogic.rmi.cluster.ClusterableServerRef.invoke(ClusterableServerRef.java:230)"},
+//			 {id: "1", line: "at weblogic.rmi.internal.BasicServerRef$1.run(BasicServerRef.java:522)"},
+//			 {id: "1", line: "at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)"},
+//			 {id: "1", line: "at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:146)"}
+//		 ];
 		 
 		 	$scope.expandSelected=function(log){
 		 	 data.forEach(function(val){
 	 			if(data.id == log.id){
 		 				val.expanded=false;
-		 				
+		 				//list of log content
 		 			}
 		 		})
 			    log.expanded=true;
