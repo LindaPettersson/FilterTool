@@ -1,9 +1,17 @@
-<!-- Header -->
+<!-- Header navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="navController">
 	<a class="navbar-brand" href="#">StackFilter</a>
 	<ul class="nav ml-auto">
+		<div class="dropdown">
+			<button class="dropbtn"><i class="fas fa-cogs"></i> Inställningar</button>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a> 
+				<a href="#">Link 2</a> 
+				<a href="#">Link 3</a>
+			</div>
+		</div>
 		<li class="nav-item" ng-class="{active: isActive('/home')}"><a href="#"> 
-			<i class="fas fa-sign-out-alt"></i>Logga ut
-		</a></li>
-	</ul>
+			<i class="fas fa-sign-out-alt"></i>Logga ut</a>
+		</li>
+	</ul> 
 </nav>
