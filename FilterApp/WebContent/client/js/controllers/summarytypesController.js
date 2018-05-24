@@ -1,9 +1,11 @@
-myApp.controller('summarytypesController', ['$scope', '$location','NgTableParams', function($scope, $location, NgTableParams){
+myApp.controller('summarytypesController', ['$scope', '$location', 'NgTableParams', function($scope, $location, NgTableParams){
 	
 	//Back to choosefiles
 	$scope.goToChooseFiles = function(){
 		$location.path('/choosefiles');
 	};
+	
+	
 	
 	/* TODO
 	 * Get summary for exception types from FileHandler class

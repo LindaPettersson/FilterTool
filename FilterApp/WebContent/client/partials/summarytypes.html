@@ -10,6 +10,9 @@
 		</div>
 		<div id="view-body">
 			<div id="info-row">
+				<button id="settings" type="button" ng-click="open()">
+					<i class="fas fa-cogs"></i>
+				</button>
 				<div id="stacktrace-name">
 					<p>STACKTRACE: 20171113-2003.IDdP2.stacktrace.log</p>
 				</div>
@@ -20,6 +23,10 @@
 				</div>
 			</div>
 			<table ng-table="tableParams" class="table table-responsive-sm center" show-filter="true" id="table-types">
+			<col>
+			<col>
+			<col width="100">
+			<col width="100">
 				<tr ng-repeat="type in $data">
 					<td title="'Senaste logg'" filter="{ date: 'text'}" sortable="'date'">{{type.date}}</td>
 					<td title="'Typ av exception'" filter="{ name: 'text'}" sortable="'name'">{{type.name}}</td>
@@ -31,4 +38,38 @@
 				</tr>
 			</table>
 		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modal for Show/Hide exceptions -->
+	<!-- <div class="modal" id="settings-exception-types">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>VISA/DÖLJ TYPER AV EXCEPTIONS</h3>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Bocka ur för att dölja</p>
+				</div>
+				<div class="modal-footer">
+					<p>Bocka ur för att dölja</p>
+					<ul id="exception-type-list" ng-repeat="type in $types">
+						<li>
+							<div class="checkbox">
+      							<label><input type="checkbox" value="">{{type.name}}</label>
+    						</div>
+    					</li>
+					</ul>
+				</div>
+			</div>
+		</div> -->
 	</div>
