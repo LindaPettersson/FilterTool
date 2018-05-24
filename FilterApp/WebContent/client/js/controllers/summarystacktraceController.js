@@ -1,6 +1,6 @@
-myApp.controller('summaryexceptionsController', ['$scope', '$location', 'NgTableParams', function($scope, $location, NgTableParams){
+myApp.controller('summarystacktraceController', ['$scope', '$location', 'NgTableParams', function($scope, $location, NgTableParams){
 
-	//Back to summary types
+	//Back to Summary types
 	$scope.goToSummaryTypes = function(){
 		$location.path('/summarytypes');
 	}

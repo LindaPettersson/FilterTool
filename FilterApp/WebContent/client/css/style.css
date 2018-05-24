@@ -105,7 +105,14 @@ input[type='file'] {
 	color: #383d41; !important;
 }
 
-
+/***** SUMMARY TYPES ******/
+#info-row{
+	text-align: center;
+}
+#stacktrace-name, #open-stacktrace-btn{
+	display: inline-block;
+	margin: 0px 0px 5px 30px;
+}
 
 /***** SUMMARY EXCEPTIONS *******/
 #table-types, #table-exceptions{

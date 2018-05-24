@@ -3,10 +3,14 @@ myApp.controller('summarytypesController', ['$scope', '$location','NgTableParams
 	//Back to choosefiles
 	$scope.goToChooseFiles = function(){
 		$location.path('/choosefiles');
-	}
+	};
 	
+	/* TODO
+	 * Get summary for exception types from FileHandler class
+	 * Replace mock data
+	 */
 	
-	//Display dummy data in table
+	//Display mock data in table
 	var data = [
 		{date: "2018-05-08 15:14:25", name: "IdSekretess", amount: 25},
 		{date: "2018-05-08 10:11:02", name: "FileNotFound", amount: 7},
@@ -18,10 +22,16 @@ myApp.controller('summarytypesController', ['$scope', '$location','NgTableParams
 		];
 	$scope.tableParams = new NgTableParams({}, { dataset: data});
 	
-	//Display chosen exception
+	//Go to summary stacktrace
+	$scope.goToSummaryStacktrace = function(){
+		$location.path('/summarystacktrace');
+	};
+	
+	
+	//Go to summary exceptions
 	$scope.goToSummaryException = function(){
 		$location.path('/summaryexceptions');
-	}
+	};
 	
 	
 }]);

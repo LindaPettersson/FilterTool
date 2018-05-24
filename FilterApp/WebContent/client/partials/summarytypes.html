@@ -10,21 +10,32 @@
 		</div>
 
 		<div id="view-body">
-			
-				<table ng-table="tableParams" class="table table-responsive-sm center" show-filter="true" id="table-types">
-					<tr ng-repeat="type in $data">
-						<td title="'Senaste logg'" filter="{ date: 'text'}"
-							sortable="'date'">{{type.date}}</td>
-						<td title="'Typ av exception'" filter="{ name: 'text'}"
-							sortable="'name'">{{type.name}}</td>
-						<td title="'Antal'">{{type.amount}}</td>
-						<td>
-							<button class="btn btn-dark" ng-click="goToSummaryException()">
-								<i class="far fa-hand-pointer"></i> Välj
-							</button>
-						</td>
-					</tr>
-				</table>
-			
+			<div id="info-row">
+				<div id="stacktrace-name">
+					<p>STACKTRACE: 20171113-2003.IDdP2.stacktrace.log</p>
+				</div>
+				<div id="open-stacktrace-btn">
+					<button class="btn btn-dark btn-sm" ng-click="goToSummaryStacktrace()">
+						<i class="fas fa-box-open"></i> Öppna
+					</button>
+				</div>
+			</div>
+			<table ng-table="tableParams"
+				class="table table-responsive-sm center" show-filter="true"
+				id="table-types">
+				<tr ng-repeat="type in $data">
+					<td title="'Senaste logg'" filter="{ date: 'text'}"
+						sortable="'date'">{{type.date}}</td>
+					<td title="'Typ av exception'" filter="{ name: 'text'}"
+						sortable="'name'">{{type.name}}</td>
+					<td title="'Antal'">{{type.amount}}</td>
+					<td>
+						<button class="btn btn-dark" ng-click="goToSummaryException()">
+							<i class="far fa-hand-pointer"></i> Välj
+						</button>
+					</td>
+				</tr>
+			</table>
+
 		</div>
 	</div>
