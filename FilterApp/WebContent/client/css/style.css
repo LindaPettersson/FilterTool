@@ -9,7 +9,8 @@ a {
 .table td {
 	color: #383d41; !important;
 	text-align: center;
-}
+	padding: 0.35rem; !important;
+} 
 #public-header {
  	text-align: center;
     margin-left: 0%;
