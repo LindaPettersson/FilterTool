@@ -8,7 +8,7 @@ myApp.controller('summaryexceptionsController', ['$scope', '$location', 'NgTable
 	
 	//Display mock data in table	
 		 var data = [
-			  {id: "1", date: "2017-11-13 16:35:36", type: "IdSekretess", name: "IdSokning.java:149", logDate: "Tid: 2017-12-12 20.05.05;077",
+			  {id: "1", date: "2017-11-13 16:35:36", type: "IdSekretess", name: "IdSokning.java:149", logDate: "Tid: 2017-11-13 16:35:36;077",
 			   logThread: "Tråd: [ACTIVE] ExecuteThread: '19' for queue: 'weblogic.kernel.Default (self-tuning)'",
 			   logCallID: "AnropsID: u30216_15022.171113.163531781.160.72",
 			   logException: "se.rsv.id.util.exception.IdSekretessException: Felkod:70 Sekretess",
