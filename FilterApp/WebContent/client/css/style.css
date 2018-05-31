@@ -6,11 +6,6 @@ h1, h2, h3, h4, p, a , th, td{
 a {
     color: #383d41; !important;
 }
-.table td {
-	color: #383d41; !important;
-	text-align: center;
-	padding: 0.35rem; !important;
-} 
 #public-header {
  	text-align: center;
     margin-left: 0%;
@@ -19,10 +14,10 @@ a {
 #view-header {
  	text-align: center;
     margin-left: -7%;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 #view-body {
-	padding-top: 3%;
+	padding-top: 1%;
 }
 #arrow-back {
 	text-align: left;
@@ -204,6 +199,25 @@ input[type='file'] {
 }
 #log-content{
 	margin-left: 3%;
+}
+/* Table rows */
+.table thead th, .form-control{
+	line-height: 0.5; !important;
+}
+.table td {
+	color: #383d41; !important;
+	text-align: center;
+	padding: 0.35rem; !important;
+} 
+/* Display amount of rows */
+.btn-group, .btn-group-vertical {
+    margin-left: 10%; !important;
+    margin-top: 20px; !important;
+}
+/* Pagination */
+.ng-table-pagination {
+    margin-top: 1px; !important;
+    margin-left: 10%; !important;
 }
 
 
