@@ -7,8 +7,6 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
 	$routeProvider.when('/summarystacktrace', {templateUrl: 'partials/summarystacktrace.html', controller: 'summarystacktraceController'});
 	$routeProvider.otherwise({redirectTo: '/home'});
 	
-
-	
 	
 }]);
 

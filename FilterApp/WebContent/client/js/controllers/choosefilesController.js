@@ -11,10 +11,9 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 		 
 		 //TODO
 		 /* 
-		  * Create java class FileHandler
 		  * Setup REST api
 		  * 
-		  * Run file(s) through class for InputFileStream
+		  * Run file(s) through FileHandler
 		  * Create objects for each stacktrace and logs
 		  * Return objects
 		  * 
@@ -23,18 +22,6 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 		 //Proceed to 'summarytpes'
 		 $location.path('/summarytypes');
 		};
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		//TEST
-//		 $scope.showContent = function($fileContent){
-//		 $scope.content = $fileContent;
-//	    };
+
 		
 }]);

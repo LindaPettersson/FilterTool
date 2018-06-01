@@ -6,7 +6,6 @@ myApp.controller('summarytypesController', ['$scope', '$location', 'NgTableParam
 	};
 	
 	
-	
 	/* TODO
 	 * Get summary for exception types from FileHandler class
 	 * Replace mock data
