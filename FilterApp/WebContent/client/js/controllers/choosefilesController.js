@@ -3,9 +3,6 @@ myApp.controller('choosefilesController', ['$scope', '$location', function($scop
 	 //Array for selected files
 	 $scope.files = []; 
 	 
-	 $scope.showContent = function($fileContent){
-		 	 $scope.content = $fileContent;
-		  };
 	    
 	 //Upload files and proceed to 'summarytypes'
 	 $scope.Upload = function(){
